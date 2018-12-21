@@ -12,12 +12,20 @@ import CoreActionSheetPicker
 class SWTableViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet var UIDatePickerModeTime: UIButton!
     @IBAction func TimePickerClicked(_ sender: UIButton) {
+//
+//        let datePicker = ActionSheetDatePicker(title: "Time:", datePickerMode: UIDatePickerMode.time, selectedDate: Date(), target: self, action: #selector(SWTableViewController.datePicked(_:)), origin: sender.superview!.superview)
+//
+//        datePicker?.minuteInterval = 20
+        
+        let stringPicker = ActionSheetStringPicker(title: "", rows: ["sfd","dd","ggg"], initialSelection: 0, doneBlock: { (picker, selected, value) in
+            
+        }, cancel: { (pickre) in
+            
+        }, origin: view)
+        
+        stringPicker?.show()
 
-        let datePicker = ActionSheetDatePicker(title: "Time:", datePickerMode: UIDatePickerMode.time, selectedDate: Date(), target: self, action: #selector(SWTableViewController.datePicked(_:)), origin: sender.superview!.superview)
-
-        datePicker?.minuteInterval = 20
-
-        datePicker?.show()
+//        datePicker?.show()
 
     }
     @IBOutlet var textField: UITextField!
