@@ -186,15 +186,7 @@
         attributeTitle = [[NSAttributedString alloc] initWithString:@"" attributes:self.pickerTextAttributes];
     }
     pickerLabel.attributedText = attributeTitle;
-    pickerLabel.font = [UIFont systemFontOfSize:18];
-
-//    if (row == self.selectedIndex) {
-//        pickerLabel.font = [UIFont systemFontOfSize:21];
-////        pickerLabel.textColor = [UIColor blackColor];
-////        NSLog(@"%ld",self.selectedIndex);
-//    } else {
-////        pickerLabel.textColor = [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1];
-//    }
+    pickerLabel.font = [UIFont systemFontOfSize:21];
     return pickerLabel;
 }
 
